@@ -188,11 +188,11 @@ Given more time, the following enhancements could be made:
 
 -   **Persistent Storage**:
     
-    Implement data persistence using a database or external storage solution to retain readings across server restarts. I would do this with Redis because of the ability to hit Redis with multiple instances of this service, Redis is the source of truth, it's fast and can persist data to disk.
+    Implement data persistence using a database or external storage solution to retain readings across server restarts. I would do this with Redis because of the ability to hit Redis with multiple instances of this service, Redis is the source of truth, it's fast and can persist data to disk. Multiple instances of the Rails API can be updating all at once horizontally and update redis as the holder of all data.
     
 -   **Concurrency Handling**:
     
-    Further ensure thread safety and data consistency when handling multiple concurrent requests, possibly by adding locks or using more advanced concurrency primitives. Redis can also help with this or if we want to save these in a DB we can use atomic updates.
+    Further ensure thread safety and data consistency when handling multiple concurrent requests, by adding locks or using more advanced concurrency primitives. Redis can also help with this or if we want to save these in a DB we can use atomic updates.
     
 -   **Input Validation**:
     
@@ -212,7 +212,7 @@ Given more time, the following enhancements could be made:
     
 -   **Monitoring and Metrics**:
     
-    Integrate monitoring tools to track application performance and health metrics.
+    Integrate monitoring tools to track application performance and health metrics such as Prometheus or New Relic.
     
 -   **API Documentation Tools**:
     
@@ -220,7 +220,7 @@ Given more time, the following enhancements could be made:
     
 -   **Error Handling Enhancements**:
     
-    Create custom error classes and rescue handlers to manage exceptions more gracefully.
+    Create custom error classes and rescue handlers to manage exceptions more gracefully. This can also add to logs automatically.
     
 
 ----------
