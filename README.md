@@ -188,11 +188,11 @@ Given more time, the following enhancements could be made:
 
 -   **Persistent Storage**:
     
-    Implement data persistence using a database or external storage solution to retain readings across server restarts. I would do this with Redis because of the ability to hit Redis with multiple instances of this service, Redis it the source of truth.
+    Implement data persistence using a database or external storage solution to retain readings across server restarts. I would do this with Redis because of the ability to hit Redis with multiple instances of this service, Redis is the source of truth, it's fast and can persist data to disk.
     
 -   **Concurrency Handling**:
     
-    Further ensure thread safety and data consistency when handling multiple concurrent requests, possibly by adding locks or using more advanced concurrency primitives. Redis can also help with this.
+    Further ensure thread safety and data consistency when handling multiple concurrent requests, possibly by adding locks or using more advanced concurrency primitives. Redis can also help with this or if we want to save these in a DB we can use atomic updates.
     
 -   **Input Validation**:
     
