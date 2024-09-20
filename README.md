@@ -227,6 +227,10 @@ Given more time, the following enhancements could be made:
 
 ## Notes
 
+- **Slimmed Down**
+
+    I removed some other dependencies such as active_record, mailer, and others to slim this app down as we're not saving to disk.
+
 -   **Testing**:
     
     The application includes a comprehensive test suite using RSpec to ensure all functionalities work as expected.
