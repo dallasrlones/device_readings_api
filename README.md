@@ -26,13 +26,13 @@ This project implements a web API that receives and processes device readings. I
 2.  **Build the Docker Image**
     
     ```bash
-        docker-compose build
+        docker compose build
     ```
     
 3.  **Start the Application**
     
     ```bash
-        docker-compose run app
+        docker compose run app
     ``` 
     
     The API server will start and listen on `http://localhost:3000`.
@@ -42,7 +42,7 @@ This project implements a web API that receives and processes device readings. I
     To run the tests, execute:
     
     ```bash
-        docker-compose run test
+        docker compose run test
     ``` 
     
     This will run the `rspec` tests defined in the `spec` directory.
@@ -227,7 +227,7 @@ Given more time, the following enhancements could be made:
 
 ## Notes
 
-- **Slimmed Down**
+-   **Slimmed Down**
 
     I removed some other dependencies such as active_record, mailer, and others to slim this app down as we're not saving to disk.
 
