@@ -19,8 +19,8 @@ This project implements a web API that receives and processes device readings. I
 1.  **Clone the Repository**
     
     ```bash
-        git clone <repository-url>
-        cd <repository-directory>
+        git clone https://github.com/dallasrlones/device_readings_api
+        cd device_readings_api
     ``` 
     
 2.  **Build the Docker Image**
