@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+      BUNDLE_WITHOUT: "development:test"
+    volumes:
+      - .:/app
+    command: bundle exec rails server -b 0.0.0.0
+
+  test:
+    build:
+      context: .
+    environment:
+      RAILS_ENV: test
+      BUNDLE_WITHOUT: ""
+    volumes:
+      - .:/app
+    command: bundle exec rspec -fd
